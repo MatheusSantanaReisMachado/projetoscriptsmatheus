@@ -3,10 +3,10 @@
   <component name="FacetManager">
     <facet type="google-appengine-python" name="Google App Engine (Python)">
       <configuration>
-        <option name="rootFolder" value="$MODULE_DIR$/backend/src" />
-        <option name="sdkFolder" value="$USER_HOME$/bin/google_appengine" />
+        <option name="rootFolder" value="P:\Workspace\appEngine\projetoscriptsmatheus\backend\src" />
+        <option name="sdkFolder" value="P:/Programas/Google/google_appengine" />
         <option name="templatesFolder" value="" />
-        <option name="oauth2" value="false" />
+        <option name="oauth2" value="true" />
       </configuration>
     </facet>
   </component>

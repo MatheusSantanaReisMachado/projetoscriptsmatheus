@@ -1,0 +1,17 @@
+{% extends 'templates/base.html' %}
+{% block conteudo %}
+<div id="conteudo">
+    <form action="{{ salvar_curso }}" method="post" role="form">
+        <div id="form-group">
+            <label>Nome: </label><input type="text" class="form-control" name="nome" id="exampleInputEmail1">
+
+        </div>
+        <div id="form-group">
+            <label>Login: </label><input type="text" class="form-control" name="login" id="exampleInputPassword1">
+        </div>
+        <div id="form-group">
+        <button type="submit" value="Salvar" class="btn btn-default">Enviar</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

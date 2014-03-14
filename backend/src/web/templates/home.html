@@ -1,36 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>AnaCris Bolos</title>
-<link href="/static/css/estilo.css" rel="stylesheet" type="text/css" />
-</head>
-
-<body>
-<div id="tudo">
-	<div id="topo">
-		<div id="logo">
-			<img src="/static/img/logo.png" width="209" height="146">
-		</div><!--logo-->
-		<div id="menu">
-            <ul>
-	            <li><a href="#">Home</a></li>
-	            <li><a href="#">Galeria</a></li>
-	            <li><a href="#">Reservas</a></li>
-	            <li><a href="#">Contato</a></li>
-            </ul>
-		</div><!--menu-->
-	</div><!--topo-->
-	<div id="destaque">
-		<div id="banner">
-			<img src="/static/img/bolo.png" width="551" height="400">
-		</div><!--baner-->
-		<div id="conteudo">
-		</div><!--conteudo-->
-	</div><!--destaque-->
-	<div id="rodape">
-        <div id="rodapeTexto"><p>2014. AnaCris Bolos | Desenvolvido por Matheus</p></div>
-	</div><!--rodape-->
-</div><!--tudo-->
-</body>
-</html>
+{% extends 'templates/base.html' %}
+{% block conteudo %}
+<div id="conteudo">
+    <div id="banner"><img src="/static/img/bolo1.jpg" width="600" height="450" /></div><!--banner-->
+</div>
+{% endblock %}

@@ -3,7 +3,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>AnaCris Bolos</title>
-<link href="/static/css/estilo.css" rel="stylesheet" type="text/css" />
+{% block configuracao %}
+
+{% endblock %}
+
 </head>
 <body>
     <div id="tudo">
@@ -13,10 +16,9 @@
 
         <div id="menu">
             <ul>
-	            <li><a href="/home">Home</a></li>
-	            <li><a href="/contato">Galeria</a></li>
-	            <li><a href="/contato">Reservas</a></li>
-                <li><a href="/contato">Contato</a></li>
+                {% block menu %}
+
+                {%  endblock %}
             </ul>
         </div><!--menu-->
     </div><!--topo-->
@@ -25,7 +27,7 @@
 
     {% endblock %}
     <div id="rodape">
-        <div id="rodapeTexto">&copy;2014. Santana Machado Transportes | Desenvolvido por Matheus</div>
+        <div id="rodapeTexto">&copy;2014. AnaCris Bolos | Desenvolvido por Matheus</div>
     </div><!--rodapé-->
 
 </div><!--tudo-->

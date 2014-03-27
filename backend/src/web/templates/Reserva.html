@@ -5,8 +5,8 @@
 {% block menu %}
     <li ><a href="/home" >Home</a></li>
     <li ><a href="/galeria">Galeria</a></li>
-    <li ><a href="/reserva">Reservas</a></li>
-    <li class="active"><a href="/contato" class="active">Contato</a></li>
+    <li  class="active"><a href="/reserva" class="active">Reservas</a></li>
+    <li ><a href="/contato">Contato</a></li>
 {% endblock %}
 {% block conteudo %}
 <div id="conteudo">
@@ -22,7 +22,7 @@
             <label>Telefone: </label><input type="text" name="telefone" />
         </div>
         <div id="form-group">
-            <label>Mensagem: </label><textarea type="text" name="mensagem" ></textarea>
+            <label>Desscrição: </label><textarea type="text" name="mensagem" ></textarea>
         </div>
         <div id="form-group">
         <button type="submit" value="Salvar" class="btn btn-default">Enviar</button>

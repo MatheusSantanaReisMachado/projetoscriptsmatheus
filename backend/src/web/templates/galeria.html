@@ -1,0 +1,23 @@
+{% extends 'templates/base.html' %}
+{% block configuracao %}
+    <link href="/static/css/estilo.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+{% block menu %}
+    <li ><a href="/home" >Home</a></li>
+    <li class="active"><a href="/galeria" class="active">Galeria</a></li>
+    <li ><a href="/reserva">Reservas</a></li>
+    <li ><a href="/contato">Contato</a></li>
+{% endblock %}
+{% block conteudo %}
+    <div id="galeria">
+        <ul>
+            <li><img src="/static/img/thumbs/bolo.jpg" class="imgPequena"/><img src="/static/img/bolo.png" width="600" height="450" class="imgGrande"/> </li>
+            <li><img src="/static/img/thumbs/bolo1.jpg" class="imgPequena"/><img src="/static/img/bolo1.jpg" width="600" height="450" class="imgGrande"/> </li>
+            <li><img src="/static/img/thumbs/bolo2.jpg" class="imgPequena"/><img src="/static/img/bolo2.jpg" width="600" height="450" class="imgGrande"/> </li>
+            <li><img src="/static/img/thumbs/bolo3.jpg" class="imgPequena"/><img src="/static/img/bolo3.jpg" width="600" height="450" class="imgGrande"/> </li>
+           <!-- <li><img src="/static/img/thumbs/dq_cake_reeses_blizzard.jpg" class="imgPequena"/><img src="/static/img/dq_cake_reeses_blizzardd.png" width="600" height="450" class="imgGrande"/> </li>
+            -->
+        </ul>
+    </div>
+
+{% endblock %}

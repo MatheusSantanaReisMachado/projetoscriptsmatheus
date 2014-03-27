@@ -79,6 +79,15 @@ html, body{
 	text-decoration:none;
 	color: #FFFFFF;
 	}
+
+#menu li.active {
+    background-color: #BC4E56 ;
+
+}
+
+#menu a.active{
+    color: #ffffff;
+}
 	
 #banner{
     width: 940px;
@@ -106,8 +115,9 @@ html, body{
 	text-align:center;	
 	width:400px;
 	float:left;
-	color:#5a6162;
-	padding-top:30px;
+	color:#ffffff;
+	padding-top:138px;
+    padding-left: 96px;
 	}
 
 #destaqueContato span{
@@ -116,7 +126,7 @@ html, body{
 
 #destaqueContato a{
 	text-decoration:none;
-	color:#5a6162;
+	color:#ffffff;
 	}
 	
 #destaqueContato a:hover{
@@ -201,4 +211,31 @@ html, body{
     padding-top: 10px;
     padding-bottom: 10px;
     margin-top: 20px;
+}
+/*galeria de imagens*/
+
+#galeria{
+    width: 800px;
+    margin: 0px auto;
+    position: relative;
+}
+
+#galeria ul li{
+    list-style: none;
+    display: inline-table;
+}
+
+#galeria ul li .imgPequena{
+    padding: 3px;
+}
+
+#galeria ul li .imgGrande{
+    padding: 3px;
+    visibility: hidden;
+    position: absolute;
+    vertical-align:middle;
+}
+
+#galeria ul li:hover .imgGrande{
+    visibility: visible;
 }

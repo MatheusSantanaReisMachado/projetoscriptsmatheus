@@ -197,6 +197,16 @@ html, body{
 	color:#FFF;
 	font-size:12px;
 	}
+
+#rodapeTexto li{
+    float: left;
+    display:block;
+}
+
+#rodapeTexto a{
+    text-decoration: none;
+    color: #ffffff;
+}
  
  #conteudo{
 	 margin:0 auto;

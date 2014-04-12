@@ -27,7 +27,15 @@
 
     {% endblock %}
     <div id="rodape">
-        <div id="rodapeTexto">&copy;2014. AnaCris Bolos | Desenvolvido por Matheus</div>
+        <div id="rodapeTexto">
+            <ul>
+                {%  if _usuario_logado %}
+                    <li ><a href="{{ _logout_url }}" >({{ _usuario_logado.nome }}) Sair</a></li>
+                {% else %}
+                    <li ><a href="{{ _login_url }}" > Login para funcionarios</a></li>
+                {% endif %}
+                <li style="float: right">©2014. AnaCris Bolos | Desenvolvido por Matheus</li>
+          </ul>
     </div><!--rodapé-->
 
 </div><!--tudo-->

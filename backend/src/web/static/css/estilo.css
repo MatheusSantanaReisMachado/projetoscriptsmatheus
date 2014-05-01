@@ -45,7 +45,11 @@ html, body{
 #menu ul{
 	margin: 0 auto;
 	width: 940px;
-	height: 44px;
+	height: 54px;
+	}
+
+#menu ul li:hover{
+	color: #FFFFFF;
 	}
 
 #menu li{
@@ -61,6 +65,7 @@ html, body{
 
 #menu li:hover{
     background-color:#BC4E56 ;
+    color: #FFFFFF;
 }
 
 #menu li a{
@@ -249,3 +254,5 @@ html, body{
 #galeria ul li:hover .imgGrande{
     visibility: visible;
 }
+
+.table-striped>tbody>tr:nth-child(odd)>td,.table-striped>tbody>tr:nth-child(odd)>th{background-color:#f9f9f9}

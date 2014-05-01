@@ -7,7 +7,7 @@ import tmpl_middleware
 from tekton.gae.middleware import router_middleware, parameter, webapp2_dependencies, email_errors
 from usuario import middleware
 
-SENDER_EMAIL = 'renzon@gmail.com'
+SENDER_EMAIL = 'matheussrmachado@gmail.com'
 WEB_BASE_PACKAGE = "web"
 MIDDLEWARES = [
     middleware.execute,

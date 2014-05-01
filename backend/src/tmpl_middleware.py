@@ -7,7 +7,8 @@ def execute(next_process, handler, dependencies, **kwargs):
     def write_tmpl(template_name, values=None):
         dct = {'_usuario_logado': dependencies.get('_usuario_logado'),
                '_logout_url': dependencies.get('_logout_url'),
-               '_login_url': dependencies.get('_login_url')}
+               '_login_url': dependencies.get('_login_url'),
+                'request': handler.request}
         dct.update(values or {})
         return handler.response.write(tmpl.render(template_name, dct))
 

@@ -1,0 +1,58 @@
+{% extends 'templates/base.html' %}
+{% block configuracao %}
+    <link href="/static/css/estilo.css" rel="stylesheet" type="text/css" />
+    <link href="/static/css/style.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+{% block menu %}
+    <li ><a href="/home" >Home</a></li>
+    <li ><a href="/galeria">Galeria</a></li>
+    <li ><a href="/reserva">Reservas</a></li>
+    <li ><a href="/contato">Contato</a></li>
+{% endblock %}
+{% block conteudo %}
+        <div id="tabela">
+            <table>
+                <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nome</th>
+                            <th>ID</th>
+                            <th>E-mail</th>
+                            <!--<th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Gender</th>
+                            <th>Country</th>
+                            <th>State</th>
+                            <th>City</th>
+                            <th>Address</th>
+                            <th>Zip Code</th>
+                            <th>Phone</th>
+                            <th>E-Mail</th>
+                            <th>Password</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    {% for curso in lista %}
+                        <tr>
+                            <td> {{curso.indice +1}} </td>
+                            <td> {{curso.nome}} </td>
+                            <td> {{curso.google_id}} </td>
+                            <td> {{curso.email}} </td>
+                           <!-- <td>{{ curso.firstname }}</td>
+                            <td>{{ curso.lastname }}</td>
+                            <td>{{ curso.gender }}</td>
+                            <td>{{ curso.country }}</td>
+                            <td>{{ curso.state }}</td>
+                            <td>{{ curso.city }}</td>
+                            <td>{{ curso.address }}</td>
+                            <td>{{ curso.zipcode }}</td>
+                            <td>{{ curso.phone }}</td>
+                            <td>{{ curso.email }}</td>
+                            <td>{{ curso.password }}</td> -->
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+            </table>
+        </div>
+{% endblock %}

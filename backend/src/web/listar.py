@@ -1,16 +1,43 @@
 from __future__ import absolute_import, unicode_literals
-from usuario import users_service
+from usuario.model import Usuario
+import json
 __author__ = 'Matheus'
 
 def index(_write_tmpl):
-    users = users_service.get_all_users().fetch()
-    lista = []
-    i = 0
-    for user in users:
-        user = user.to_dict()
-        if "@" in user['nome']:
-            user['nome'], __ = user['nome'].split("@")
-        lista.append(user)
-        user['indice'] = i
-        i += 1
-    _write_tmpl('templates/listar.html', {'lista':lista})
+    usuarios = Usuario.query()
+    dct = {'lista_cursos': usuarios.fetch()}
+    _write_tmpl('templates/listar.html', dct)
+
+def salvar(_resp, nome, email, google_id):
+    usuario = Usuario(nome = nome, email = email, google_id = google_id)
+    key = usuario.put()
+
+    json_str = json.dumps({'id':key.id()})
+
+    _resp.write(json_str)
+
+def editar(_resp, idUsuario, nome, email):
+    usuario = Usuario.get_by_id(int(idUsuario))
+
+    usuario.nome = nome
+    usuario.email = email
+
+    usuario.put()
+
+def remover(_resp, idUsuario):
+    usuario = Usuario.get_by_id(int(idUsuario))
+    usuario.key.delete()
+
+def listar(_resp):
+    json_struct = []
+
+    usuarios = Usuario.query()
+    for usu in usuarios:
+        json_struct += [{"nome": usu.nome,
+                        "email": usu.email,
+                        "google_id": usu.google_id,
+                        "id": usu.key.id()}]
+
+    json_str = json.dumps(json_struct)
+    _resp.write(json_str)
+

@@ -3,10 +3,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>AnaCris Bolos</title>
-{% block configuracao %}
-
-{% endblock %}
-
+    <link href="/static/css/estilo.css" rel="stylesheet" type="text/css" />
+    <link href="/static/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="/static/css/gallery.css" rel="stylesheet" type="text/css" />
+    <link href="/static/css/gallery.theme.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="static/js/angular.min.js"></script>
+    <script type="text/javascript" src="static/js/usuario_control.js"></script>
 </head>
 <body>
     <div id="tudo">
@@ -30,14 +32,17 @@
         <div id="rodapeTexto">
             <ul>
                 {%  if _usuario_logado %}
-                    <li ><a href="{{ _logout_url }}" >({{ _usuario_logado.nome }}) Sair</a></li>
+                    <li ><a href="{{ _logout_url }}" > {{ _usuario_logado.nome }} | Sair</a></li>
                 {% else %}
                     <li ><a href="{{ _login_url }}" > Login para funcionarios</a></li>
                 {% endif %}
-                <li> | </li>
-                <li> <a href="/listar"> Usuários </a></li>
                 <li style="float: right">©2014. AnaCris Bolos | Desenvolvido por Matheus</li>
             </ul>
+            <br>
+            <ul>
+                <li> <a href="/listar"> Usuários </a></li>
+            </ul>
+        </div>
     </div><!--rodapé-->
 
 </div><!--tudo-->

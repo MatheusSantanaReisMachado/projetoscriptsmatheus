@@ -1,0 +1,97 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font: 14px/1.4 Georgia, Serif;
+}
+#page-wrap {
+	margin: 50px;
+}
+p {
+	margin: 20px 0;
+}
+
+	/*
+	Generic Styling, for Desktops/Laptops
+	*/
+#tabela table {
+	width: 80%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #ccc;
+    margin-left: 10%;
+}
+/* Zebra striping */
+#tabela tr:nth-of-type(odd) {
+	background: #eee;
+}
+#tabela th {
+	background: rgba(189, 18, 30, 0.89) /* ou: 4- rgba(189, 18, 30, 0.75)  */;
+	color: white;
+	font-weight: bold;
+}
+#tabela td, th {
+	padding: 6px;
+	border: 0;/*1px solid #ccc;*/
+	text-align: left;
+}
+
+
+.btn {
+display: inline-block;
+padding: 6px 12px;
+margin-bottom: 0;
+font-size: 14px;
+font-weight: normal;
+line-height: 1.428571429;
+text-align: center;
+white-space: nowrap;
+vertical-align: middle;
+cursor: pointer;
+background-image: none;
+border: 1px solid transparent;
+border-radius: 4px;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+-o-user-select: none;
+user-select: none;
+}
+
+.btn-sm{
+padding: 5px 10px;
+font-size: 12px;
+line-height: 1.5;
+border-radius: 3px;
+}
+
+.btn-primary {
+color: #fff;
+background-color: #428bca;
+border-color: #357ebd;
+}
+
+.btn-success {
+color: #fff;
+background-color: #5cb85c;
+border-color: #4cae4c;
+}
+
+.btn-danger {
+color: #fff;
+background-color: #d9534f;
+border-color: #d43f3a;
+}
+
+.glyphicon-pencil:before {
+  content: "\270f";
+}
+
+.glyphicon-ok:before {
+  content: "\e013";
+}
+
+.glyphicon-trash:before {
+  content: "\e020";
+}

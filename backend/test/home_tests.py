@@ -6,5 +6,4 @@ class HomeTests(GAETestCase):
     def test_sucesso(self):
         handler = Mock()
         home.index(handler)
-        handler.assert_called_once_with('/templates/index.html')
-
+        handler.assert_called_once_with('/templates/home.html')

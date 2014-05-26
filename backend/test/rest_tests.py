@@ -27,4 +27,3 @@ class RestTests(GAETestCase):
         usuario = lista[0]
         self.assertEqual('teste', usuario.firstname)
         self.assertEqual('teste@teste.com', usuario.email)
-

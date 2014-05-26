@@ -37,7 +37,6 @@ def listar(_resp):
                         "email": usu.email,
                         "google_id": usu.google_id,
                         "id": usu.key.id()}]
-
     json_str = json.dumps(json_struct)
     _resp.write(json_str)
 
